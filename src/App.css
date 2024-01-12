@@ -30,6 +30,17 @@ header .image-container img {
   height: auto;
 }
 
+header .image-container .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2em; /* Adjust the size as needed */
+  text-align: center;
+  line-height: 1.2; /* Adjust line height as needed */
+}
+
 nav a {
   color: #fff;
   text-decoration: none;

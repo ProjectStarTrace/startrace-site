@@ -19,6 +19,11 @@ const Header = () => {
       <h1>StarTrace</h1>
       <div className="image-container">
         <img src={starsImage} alt="Stars" />
+        <div className="overlay-text">
+          GATHER.<br />
+          APPLY.<br />
+          DEMONSTRATE.
+        </div>
       </div>
       <nav>
         {/* Navigation Links */}
