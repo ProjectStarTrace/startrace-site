@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-// Import the image
 import starsImage from './assets/stars.jpg';
+import startraceLogo from './assets/startrace.png'; // Import the logo image
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
 const Header = () => {
   return (
     <header>
-      <h1>StarTrace</h1>
+      <img src={startraceLogo} alt="StarTrace Logo" className="logo" /> {/* Replace text with logo image */}
       <div className="image-container">
         <img src={starsImage} alt="Stars" />
         <div className="overlay-text">
@@ -66,6 +66,14 @@ const MainContent = () => {
           Looking forward, StarTrace aims to initiate projects using its comprehensive data on signal strength, weather, and topography, augmenting the core team's expertise through a primarily software-based design and limited hardware use.
         </p>
       </section>
+      <div className="github-section">
+        <h2>Help Us Trace The Stars! | Our GitHub Repositories</h2>
+        <div className="buttons">
+          <a href="https://github.com/ProjectStarTrace/StarScout" className="button">StarScout</a>
+          <a href="https://github.com/ProjectStarTrace/StarSage" className="button">StarSage</a>
+          <a href="https://github.com/ProjectStarTrace/StarScope" className="button">StarScope</a>
+        </div>
+      </div>  
     </main>
   );
 };
