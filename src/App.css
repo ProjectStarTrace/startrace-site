@@ -46,6 +46,90 @@ header .image-container .overlay-text {
   line-height: 1.2;
 }
 
+.component-section {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.component-image {
+  max-width: 100%; /* Make image width responsive within its container */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Makes the image a block element */
+  margin: 0 auto; /* Center the image */
+}
+
+/* Flex container for component sections */
+.components-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) { /* Adjust the breakpoint as needed */
+  .components-container {
+    flex-direction: row;
+    flex-wrap: wrap; /* Allows items to wrap as needed */
+    justify-content: space-around; /* Adjusts spacing around items */
+  }
+
+  .component-section {
+    flex: 0 1 calc(33.333% - 20px); /* Flex grow, flex shrink, and base width */
+    /* Ensures that sections can shrink but not grow beyond their base size */
+  }
+}
+
+.about-startrace {
+  text-align: center; /* Center align the text */
+  color: #0056b3; /* Choose an exciting color */
+  margin: 20px 0; /* Add some space around the section */
+}
+
+.about-startrace h2 {
+  font-size: 2em; /* Larger font size for the heading */
+  color: #123456; /* A distinct color for the heading */
+  margin-bottom: 10px; /* Space between heading and paragraph */
+  text-transform: uppercase; /* Uppercase letters for emphasis */
+  letter-spacing: 2px; /* Increase letter spacing for effect */
+}
+
+.about-startrace p {
+  font-size: 1em; /* Set a base font size */
+  line-height: 1.6; /* Improve line height for readability */
+  color: #333333; /* A darker color for the paragraph */
+  margin: 0 auto 20px; /* Center the paragraph and add space below */
+  padding: 0 15px; /* Add some padding on the sides */
+  max-width: 1920x; /* Max width for better readability */
+  text-align: justify; /* Justify text for neat alignment */
+}
+
+/* Responsive text size based on the width of the viewport */
+@media (min-width: 600px) {
+  .about-startrace p {
+    font-size: 1.1em; /* Slightly larger font size */
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-startrace p {
+    font-size: 1.2em; /* Even larger font size */
+  }
+}
+
+.otherHomepageContent {
+  text-align: center; /* Center align the text */
+  color: #0056b3; /* Choose an exciting color */
+  margin: 20px 0; /* Add some space around the section */
+}
+.otherHomepageContent p {
+  font-size: 1em; /* Set a base font size */
+  line-height: 1.6; /* Improve line height for readability */
+  color: #333333; /* A darker color for the paragraph */
+  margin: 0 auto 20px; /* Center the paragraph and add space below */
+  padding: 0 15px; /* Add some padding on the sides */
+  max-width: 1920x; /* Max width for better readability */
+  text-align: justify; /* Justify text for neat alignment */
+}
+
 nav a {
   color: #fff;
   text-decoration: none;

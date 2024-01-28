@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import starsImage from './assets/stars.jpg';
 import startraceLogo from './assets/startrace.png'; // Import the logo image
+import starscoutImage from './assets/starscout.png'; // Import the StarScout image
+import starsageImage from './assets/starsage.png'; // Import the StarSage image
+import starscopeImage from './assets/starscope.png'; // Import the StarScope image
 
 function App() {
   return (
@@ -36,31 +39,51 @@ const Header = () => {
 const MainContent = () => {
   return (
     <main>
-      <section>
+      <section className="about-startrace">
         <h2>About StarTrace</h2>
         <p>
-          The StarTrace project is centered around safeguarding Starlink satellites from jamming attacks. It aims to provide the first publicly-available holistic view of the StarLink satellite network.
+        The StarTrace project is an community-driven project dedicated to protecting Starlink satellites from jamming attacks.
+        Its goal is to create a first-of-its-kind, comprehensive public overview of the StarLink satellite network, enhancing its security and functionality for users around the globe.
         </p>
+        <div className="components-container">
+        <div className="component-section">
+            <h3>StarScout</h3>
+            <img src={starscoutImage} alt="StarScout" className="component-image" />
+            {/* StarScout description */}
+          </div>
+
+          <div className="component-section">
+            <h3>StarSage</h3>
+            <img src={starsageImage} alt="StarSage" className="component-image" />
+            {/* StarSage description */}
+          </div>
+
+          <div className="component-section">
+            <h3>StarScope</h3>
+            <img src={starscopeImage} alt="StarScope" className="component-image" />
+            {/* StarScope description */}
+          </div>
+          </div>
       </section>
-      <section>
+      <section className= "otherHomepageContent">
         <h2>Goals and Methodology</h2>
         <p>
           StarTrace utilizes a machine learning algorithm to analyze satellite signal strength and data in conjunction with weather patterns and topography. This helps assess whether a weak signal is due to a deliberate attack or an external factor.
         </p>
       </section>
-      <section>
+      <section className= "otherHomepageContent">
         <h2>User Interface and Data Contribution</h2>
         <p>
           Users receive assessments through a user interface and can contribute data towards the development of an open-source data repository. This repository aids the project and serves as a resource for similar initiatives.
         </p>
       </section>
-      <section>
+      <section className= "otherHomepageContent">
         <h2>Community Involvement</h2>
         <p>
           As a community-driven initiative, StarTrace relies on crowdsourcing to enrich its dataset, empowering participants and enhancing the scope of the project. This approach contributes to a valuable open-source data repository.
         </p>
       </section>
-      <section>
+      <section className= "otherHomepageContent">
         <h2>Future Directions</h2>
         <p>
           Looking forward, StarTrace aims to initiate projects using its comprehensive data on signal strength, weather, and topography, augmenting the core team's expertise through a primarily software-based design and limited hardware use.
