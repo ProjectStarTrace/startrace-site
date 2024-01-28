@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import starsImage from './assets/stars.jpg';
 import startraceLogo from './assets/startrace.png'; // Import the logo image
@@ -17,9 +17,34 @@ function App() {
 }
 
 const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
   return (
     <header>
-      <img src={startraceLogo} alt="StarTrace Logo" className="logo" /> {/* Replace text with logo image */}
+      <img src={startraceLogo} alt="StarTrace Logo" className="logo" />
+      <div className="hamburger-menu" onClick={toggleDropdown} onMouseLeave={closeDropdown}>
+        <div className="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        {isDropdownOpen && (
+          <div className="dropdown-content">
+            <a href="#">Open StarScout</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        )}
+      </div>
+
       <div className="image-container">
         <img src={starsImage} alt="Stars" />
         <div className="overlay-text">
