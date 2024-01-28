@@ -30,7 +30,7 @@ const Header = () => {
           </div>
           {isDropdownOpen && (
           <div className="dropdown-content">
-            <a href="https://startrace.dev/scope">Open StarScope</a>
+            <a href="https://scope.startrace.dev/">Open StarScope</a>
             <a href="/downloads">Downloads</a>
             <a href="/leaderboard">Leaderboard</a>
           </div>
