@@ -47,23 +47,29 @@ const MainContent = () => {
         </p>
         <div className="components-container">
         <div className="component-section">
+          <a href="https://github.com/ProjectStarTrace/StarScout" className="component-link">
             <h3>StarScout</h3>
-            <img src={starscoutImage} alt="StarScout" className="component-image" />
-            {/* StarScout description */}
-          </div>
+          </a>
+          <img src={starscoutImage} alt="StarScout" className="component-image" />
+          {/* StarScout description */}
+        </div>
 
-          <div className="component-section">
+        <div className="component-section">
+          <a href="https://github.com/ProjectStarTrace/StarSage" className="component-link">
             <h3>StarSage</h3>
-            <img src={starsageImage} alt="StarSage" className="component-image" />
-            {/* StarSage description */}
-          </div>
+          </a>
+          <img src={starsageImage} alt="StarSage" className="component-image" />
+          {/* StarSage description */}
+        </div>
 
-          <div className="component-section">
+        <div className="component-section">
+          <a href="https://github.com/ProjectStarTrace/StarScope" className="component-link">
             <h3>StarScope</h3>
-            <img src={starscopeImage} alt="StarScope" className="component-image" />
-            {/* StarScope description */}
-          </div>
-          </div>
+          </a>
+          <img src={starscopeImage} alt="StarScope" className="component-image" />
+          {/* StarScope description */}
+        </div>
+      </div>
       </section>
       <section className= "otherHomepageContent">
         <h2>Goals and Methodology</h2>

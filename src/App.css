@@ -14,7 +14,7 @@ header {
 }
 
 header .logo {
-  max-width: 200px; /* Adjust the logo size as needed */
+  max-width: 340px; /* Adjust the logo size as needed */
   height: auto;
   margin-bottom: 1em;
 }
@@ -41,7 +41,7 @@ header .image-container .overlay-text {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
   line-height: 1.2;
 }
@@ -49,6 +49,7 @@ header .image-container .overlay-text {
 .component-section {
   margin-bottom: 2em;
   text-align: center;
+  position: relative; /* Added for positioning the divider line */
 }
 
 .component-image {
@@ -65,7 +66,23 @@ header .image-container .overlay-text {
   gap: 20px;
 }
 
-@media (min-width: 768px) { /* Adjust the breakpoint as needed */
+.component-link {
+  text-decoration: none; /* Removes the underline from links */
+  color: inherit; /* Inherits the color from parent elements */
+  font-size: 1.5em; /* Larger font size for the heading */
+}
+
+.component-link:hover, .component-link:focus {
+  text-decoration: underline; /* Adds underline on hover for visual feedback */
+  color: #0056b3; /* Change color on hover (optional) */
+}
+
+.component-link:visited {
+  color: inherit; /* Keeps the color same as unvisited links */
+}
+
+/* Divider lines between images on wider screens */
+@media (min-width: 768px) {
   .components-container {
     flex-direction: row;
     flex-wrap: wrap; /* Allows items to wrap as needed */
@@ -74,7 +91,16 @@ header .image-container .overlay-text {
 
   .component-section {
     flex: 0 1 calc(33.333% - 20px); /* Flex grow, flex shrink, and base width */
-    /* Ensures that sections can shrink but not grow beyond their base size */
+  }
+
+  .component-section:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px; /* Width of the divider line */
+    background-color: #ccc; /* Color of the divider line */
   }
 }
 
@@ -98,7 +124,7 @@ header .image-container .overlay-text {
   color: #333333; /* A darker color for the paragraph */
   margin: 0 auto 20px; /* Center the paragraph and add space below */
   padding: 0 15px; /* Add some padding on the sides */
-  max-width: 1920x; /* Max width for better readability */
+  max-width: 1920px; /* Max width for better readability */
   text-align: justify; /* Justify text for neat alignment */
 }
 
@@ -120,14 +146,23 @@ header .image-container .overlay-text {
   color: #0056b3; /* Choose an exciting color */
   margin: 20px 0; /* Add some space around the section */
 }
+
 .otherHomepageContent p {
   font-size: 1em; /* Set a base font size */
   line-height: 1.6; /* Improve line height for readability */
   color: #333333; /* A darker color for the paragraph */
   margin: 0 auto 20px; /* Center the paragraph and add space below */
   padding: 0 15px; /* Add some padding on the sides */
-  max-width: 1920x; /* Max width for better readability */
+  max-width: 1920px; /* Max width for better readability */
   text-align: justify; /* Justify text for neat alignment */
+}
+
+.otherHomepageContent h2 {
+  font-size: 2em; /* Larger font size for the heading */
+  color: #123456; /* A distinct color for the heading */
+  margin-bottom: 10px; /* Space between heading and paragraph */
+  text-transform: uppercase; /* Uppercase letters for emphasis */
+  letter-spacing: 2px; /* Increase letter spacing for effect */
 }
 
 nav a {
@@ -151,9 +186,13 @@ main {
 
 .github-section h2 {
   margin-bottom: 1em;
-  font-size: 1.5em;
-  color: #000;
+  font-size: 2em; /* Larger font size for the heading */
+  color: #123456; /* A distinct color for the heading */
+  margin-bottom: 10px; /* Space between heading and paragraph */
+  text-transform: uppercase; /* Uppercase letters for emphasis */
+  letter-spacing: 2px; /* Increase letter spacing for effect */
 }
+
 
 .buttons {
   display: flex;
