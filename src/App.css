@@ -8,18 +8,16 @@ body, html {
 }
 
 header {
-  background-color: #fff; /* White background */
+  background-color: #fff;
   text-align: center;
   padding: 1em 0;
-  position: relative; /* Needed for absolute positioning of the hamburger menu */
 }
 
 header .logo {
-  max-width: 340px; /* Adjust the logo size as needed */
+  max-width: 200px;
   height: auto;
   margin-bottom: 1em;
 }
-
 
 header .image-container {
   width: 100%;
@@ -35,6 +33,7 @@ header .image-container img {
   left: 0;
   width: 100%;
   height: auto;
+  transition: width 0.3s ease;
 }
 
 header .image-container .overlay-text {
@@ -43,56 +42,60 @@ header .image-container .overlay-text {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
   line-height: 1.2;
+  transition: font-size 0.3s ease;
+}
+
+@media screen and (max-width: 500px) {
+  .image-container img {
+    width: 75%;
+  }
+
+  .overlay-text {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .image-container img {
+    width: 100%;
+  }
+
+  .overlay-text {
+    font-size: 2em;
+  }
 }
 
 .component-section {
   margin-bottom: 2em;
   text-align: center;
-  position: relative; /* Added for positioning the divider line */
+  position: relative;
 }
 
 .component-image {
-  max-width: 100%; /* Make image width responsive within its container */
-  height: auto; /* Maintain the aspect ratio */
-  display: block; /* Makes the image a block element */
-  margin: 0 auto; /* Center the image */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Flex container for component sections */
 .components-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.component-link {
-  text-decoration: none; /* Removes the underline from links */
-  color: inherit; /* Inherits the color from parent elements */
-  font-size: 1.5em; /* Larger font size for the heading */
-}
-
-.component-link:hover, .component-link:focus {
-  text-decoration: underline; /* Adds underline on hover for visual feedback */
-  color: #0056b3; /* Change color on hover (optional) */
-}
-
-.component-link:visited {
-  color: inherit; /* Keeps the color same as unvisited links */
-}
-
-/* Divider lines between images on wider screens */
 @media (min-width: 768px) {
   .components-container {
     flex-direction: row;
-    flex-wrap: wrap; /* Allows items to wrap as needed */
-    justify-content: space-around; /* Adjusts spacing around items */
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .component-section {
-    flex: 0 1 calc(33.333% - 20px); /* Flex grow, flex shrink, and base width */
+    flex: 0 1 calc(33.333% - 20px);
   }
 
   .component-section:not(:last-child):after {
@@ -101,70 +104,84 @@ header .image-container .overlay-text {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 1px; /* Width of the divider line */
-    background-color: #ccc; /* Color of the divider line */
+    width: 1px;
+    background-color: #ccc;
   }
 }
 
+.component-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2em;
+}
+
+.component-link:hover, .component-link:focus {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.component-link:visited {
+  color: inherit;
+}
+
 .about-startrace {
-  text-align: center; /* Center align the text */
-  color: #0056b3; /* Choose an exciting color */
-  margin: 20px 0; /* Add some space around the section */
+  text-align: center;
+  color: #0056b3;
+  margin: 20px 0;
 }
 
 .about-startrace h2 {
-  font-size: 2em; /* Larger font size for the heading */
-  color: #123456; /* A distinct color for the heading */
-  margin-bottom: 10px; /* Space between heading and paragraph */
-  text-transform: uppercase; /* Uppercase letters for emphasis */
-  letter-spacing: 2px; /* Increase letter spacing for effect */
+  font-size: 1.2em;
+  color: #123456;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .about-startrace p {
-  font-size: 1em; /* Set a base font size */
-  line-height: 1.6; /* Improve line height for readability */
-  color: #333333; /* A darker color for the paragraph */
-  margin: 0 auto 20px; /* Center the paragraph and add space below */
-  padding: 0 15px; /* Add some padding on the sides */
-  max-width: 1920px; /* Max width for better readability */
-  text-align: justify; /* Justify text for neat alignment */
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 auto 20px;
+  padding: 0 15px;
+  max-width: 1920px;
+  text-align: justify;
 }
 
-/* Responsive text size based on the width of the viewport */
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   .about-startrace p {
-    font-size: 1.1em; /* Slightly larger font size */
+    font-size: 1.1em;
   }
 }
 
 @media (min-width: 1024px) {
   .about-startrace p {
-    font-size: 1.2em; /* Even larger font size */
+    font-size: 1.2em;
   }
 }
 
 .otherHomepageContent {
-  text-align: center; /* Center align the text */
-  color: #0056b3; /* Choose an exciting color */
-  margin: 20px 0; /* Add some space around the section */
+  text-align: center;
+  color: #0056b3;
+  margin: 20px 0;
 }
 
 .otherHomepageContent p {
-  font-size: 1em; /* Set a base font size */
-  line-height: 1.6; /* Improve line height for readability */
-  color: #333333; /* A darker color for the paragraph */
-  margin: 0 auto 20px; /* Center the paragraph and add space below */
-  padding: 0 15px; /* Add some padding on the sides */
-  max-width: 1920px; /* Max width for better readability */
-  text-align: justify; /* Justify text for neat alignment */
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 auto 20px;
+  padding: 0 15px;
+  max-width: 1920px;
+  text-align: justify;
 }
 
 .otherHomepageContent h2 {
-  font-size: 2em; /* Larger font size for the heading */
-  color: #123456; /* A distinct color for the heading */
-  margin-bottom: 10px; /* Space between heading and paragraph */
-  text-transform: uppercase; /* Uppercase letters for emphasis */
-  letter-spacing: 2px; /* Increase letter spacing for effect */
+  font-size: 1.2em;
+  color: #123456;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 nav a {
@@ -188,13 +205,9 @@ main {
 
 .github-section h2 {
   margin-bottom: 1em;
-  font-size: 2em; /* Larger font size for the heading */
-  color: #123456; /* A distinct color for the heading */
-  margin-bottom: 10px; /* Space between heading and paragraph */
-  text-transform: uppercase; /* Uppercase letters for emphasis */
-  letter-spacing: 2px; /* Increase letter spacing for effect */
+  font-size: 1.5em;
+  color: #000;
 }
-
 
 .buttons {
   display: flex;
@@ -243,6 +256,7 @@ footer {
   padding: 1em 0;
 }
 
+
 .hamburger-menu {
   position: absolute;
   top: 10px;
@@ -255,7 +269,7 @@ footer {
   width: 40.5px; /* 1.5 times the original width (25px) */
   height: 4.5px; /* 1.5 times the original height (3px) */
   margin-bottom: 4.5px; /* 1.5 times the original margin (5px) */
-  margin-top: 12.5px; /* 1.5 times the original margin (5px) */
+  margin-top: 9.5px; /* 1.5 times the original margin (5px) */
   background-color: #333;
 }
 
@@ -293,15 +307,55 @@ footer {
 }
 
 
-/* Media query for portrait mode */
-@media screen and (orientation: portrait) {
-  .image-container img {
-    width: 80%; /* Smaller width in portrait mode */
-    height: auto; /* Maintain aspect ratio */
+@media (max-width: 500px) {
+  .hamburger-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
   }
-
-  .overlay-text {
-    font-size: 1.5em; /* Smaller font size in portrait mode */
+  
+  .hamburger-icon span {
+    display: block;
+    width: 30.5px; /* 1.5 times the original width (25px) */
+    height: 3.5px; /* 1.5 times the original height (3px) */
+    margin-bottom: 5.5px; /* 1.5 times the original margin (5px) */
+    margin-top: 10.5px; /* 1.5 times the original margin (5px) */
+    margin-right: 3px; /* 1.5 times the original margin (5px) */
+    background-color: #333;
   }
+  
+  /* Styles for the dropdown content */
+  .dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 320px; /* Increased from 160px to 320px */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 24px 32px; /* Increased padding */
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Display the dropdown on hover */
+  .hamburger-menu:hover .dropdown-content {
+    display: block;
+  }
+  
 }
-
