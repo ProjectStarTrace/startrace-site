@@ -30,6 +30,7 @@ const Header = () => {
           </div>
           {isDropdownOpen && (
           <div className="dropdown-content">
+            <a href="/">Home</a>
             <a href="https://scope.startrace.dev/">Open StarScope</a>
             <a href="/downloads">Downloads</a>
             <a href="/leaderboard">Leaderboard</a>
@@ -37,17 +38,7 @@ const Header = () => {
           )}
         </div>
   
-        <div className="image-container">
-          <img src={starsImage} alt="Stars" />
-          <div className="overlay-text">
-            GATHER.<br />
-            APPLY.<br />
-            DEMONSTRATE.
-          </div>
-        </div>
-        <nav>
-          {/* Navigation Links */}
-        </nav>
+       
       </header>
     );
   };
