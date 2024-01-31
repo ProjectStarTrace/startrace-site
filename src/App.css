@@ -291,3 +291,17 @@ footer {
 .hamburger-menu:hover .dropdown-content {
   display: block;
 }
+
+
+/* Media query for portrait mode */
+@media screen and (orientation: portrait) {
+  .image-container img {
+    width: 80%; /* Smaller width in portrait mode */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .overlay-text {
+    font-size: 1.5em; /* Smaller font size in portrait mode */
+  }
+}
+
