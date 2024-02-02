@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from './Header'; // Import the Header component
 
-const Leaderboard = () => {
+const Team = () => {
   return (
     <div>
       <Header />
@@ -11,4 +11,4 @@ const Leaderboard = () => {
   );
 }
 
-export default Leaderboard;
+export default Team;

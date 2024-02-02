@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
 
 import Downloads from './Downloads'; // Import the Downloads component
-import Leaderboard from './Leaderboard'; // Import the Leaderboard component
+import Leaderboard from './Team'; // Import the Leaderboard component
 import Header from './Header'; // Import the Header component
 import Footer from './Footer';
 
