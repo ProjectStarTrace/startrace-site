@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
 
-import Downloads from './Downloads'; // Import the Downloads component
-import Leaderboard from './Team'; // Import the Leaderboard component
 import Header from './Header'; // Import the Header component
 import Footer from './Footer';
 
 import './App.css';
 import starsImage from './assets/stars.jpg';
-import startraceLogo from './assets/startrace.png'; // Import the logo image
 import starscoutImage from './assets/starscout.png'; // Import the StarScout image
 import starsageImage from './assets/starsage.png'; // Import the StarSage image
 import starscopeImage from './assets/starscope.png'; // Import the StarScope image

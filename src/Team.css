@@ -1,0 +1,68 @@
+.team-page-container {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Styles for the "Meet the Team" heading */
+  .team-page-container h1 {
+    color: #333; /* Adjust the color to fit your site's theme */
+    margin-bottom: 40px; /* Add some space below the heading */
+    font-size: 2.5em; /* Increase the font size */
+    font-weight: normal; /* Adjust the weight as needed */
+  }
+  
+  /* Existing styles for .team-container, .team-member, etc. */
+  .team-container {
+    display: flex;
+    justify-content: center;
+    gap: 7em;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    margin-bottom: 20px; /* Space below the team-container */
+  }
+  
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px; /* Adjust based on your preference */
+    margin: 0 10px; /* Adds margin for spacing between team members */
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 300px; /* Updated size */
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px; /* Space between the image and the name */
+  }
+  
+  .team-member h3 {
+    margin: 10px 0 5px;
+    color: #007bff; /* Adjust to match your site's theme */
+  }
+  
+  .team-member p {
+    text-align: center;
+  }
+  
+  /* Add responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .team-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .team-member img {
+      width: 150px; /* Adjust size for smaller screens */
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .team-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
