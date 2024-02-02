@@ -6,6 +6,7 @@ import startraceLogo from './assets/startrace.png'; // Import the logo image
 import starscoutImage from './assets/starscout.png'; // Import the StarScout image
 import starsageImage from './assets/starsage.png'; // Import the StarSage image
 import starscopeImage from './assets/starscope.png'; // Import the StarScope image
+import { Link } from 'react-router-dom'; // Add this import
 
 
 const Header = () => {
@@ -21,7 +22,9 @@ const Header = () => {
   
     return (
       <header>
+        <Link to="/"> {/* Wrap the logo with Link */}
         <img src={startraceLogo} alt="StarTrace Logo" className="logo" />
+      </Link>
         <div className="hamburger-menu" onClick={toggleDropdown} onMouseLeave={closeDropdown}>
           <div className="hamburger-icon">
             <span></span>

@@ -1,0 +1,100 @@
+/* Downloads Page Styles */
+
+.full-width-image-container {
+    display: flex;
+    justify-content: center; /* Center the image container */
+    padding: 20px 0; /* Add some padding above and below the image */
+  }
+  
+  .full-width-image-container img {
+    width: 60%; /* Set the image width to 40% of the container */
+    height: auto; /* Maintain aspect ratio */
+    /* Removed the width: 100%; to not stretch the image full-width */
+  }
+  
+  .download-options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .download-options-container {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  
+  .download-option {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px; /* Adjust based on preference */
+  }
+  
+  .download-link {
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .download-link:hover {
+    background-color: #0056b3;
+  }
+  
+  hr {
+    margin-top: 40px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+  
+  .setup-guide {
+    padding: 20px;
+  }
+  
+  .setup-guide h2 {
+    margin-top: 20px;
+  }
+  
+  .setup-guide p {
+    margin-top: 10px;
+  }
+  
+  .setup-guide {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the setup guide */
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px; /* Adjust based on your layout */
+  }
+  
+  .setup-guide h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .setup-steps .step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .setup-steps .step img {
+    margin-right: 15px;
+    width: 100px; /* Adjust the size of the images */
+    height: auto;
+    border-radius: 4px; /* Optional: adds rounded corners to the images */
+  }
+  
+  .setup-steps .step p {
+    flex: 1;
+    margin: 0; /* Adjust text margins as needed */
+  }
