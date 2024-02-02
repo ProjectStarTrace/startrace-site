@@ -1,7 +1,7 @@
 // Downloads.js
 import React from 'react';
 import Header from './Header'; // Import the Header component
-import starScoutDownloadImage from './assets/starScoutDownload.png'; // Make sure the path matches
+import starScoutDownloadImage from './assets/starScoutCartoonGuy.png'; // Make sure the path matches
 import './Downloads.css';
 import rasPiImage from './assets/raspPi.png';
 import microSDImage from './assets/microSD.png';
