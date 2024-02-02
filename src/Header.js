@@ -34,9 +34,9 @@ const Header = () => {
           {isDropdownOpen && (
           <div className="dropdown-content">
             <a href="/">Home</a>
-            <a href="https://scope.startrace.dev/">Open StarScope</a>
             <a href="/downloads">Downloads</a>
-            <a href="/leaderboard">Leaderboard</a>
+            <a href="/team">The Team</a>
+            <a href="https://scope.startrace.dev/">Open StarScope</a>
           </div>
           )}
         </div>
