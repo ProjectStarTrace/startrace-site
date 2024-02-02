@@ -26,7 +26,7 @@ const Downloads = () => {
         </div>
 
         <div className="download-option">
-          <h2>StarScout Raspberry Pi Image</h2>
+          <h2>StarScout Pi Image</h2>
           <p>Download a prepackaged image to flash onto a Raspberry Pi.</p>
           <a href="link-to-download-raspberry-version" className="download-link">Download Raspberry Pi Image</a>
         </div>
